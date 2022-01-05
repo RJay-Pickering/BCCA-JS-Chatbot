@@ -1,0 +1,44 @@
+.message_history {
+    padding: 20%;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 3.5vw;
+    margin-bottom: 3%;
+}
+
+.user_input {
+    margin-left: 80%;
+}
+
+.user_message {
+    margin-left: 2.25%;
+    margin-top: 1.5%;
+}
+
+.user_box {
+    margin-top: -30%;
+    margin-bottom: 33%;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 3.5vw;
+    height: 2.5vw;
+    margin-left: 65%;
+    width: 65%;
+}
+
+.bot_message {
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 1.5%;
+}
+
+.bot_box {
+    margin-top: -30%;
+    margin-bottom: 33%;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 3.5vw;
+    height: 3.5vw;
+    margin-left: -30%;
+    width: 65%;
+}
