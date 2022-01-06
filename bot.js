@@ -30,3 +30,5 @@ submit.addEventListener("click", () => {
     bot_box.append(bot_message)
     messages.append(bot_box)
 })
+
+//********** */
