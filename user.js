@@ -13,10 +13,10 @@ const how_apply_answer = "A high school senior must be nominated by an unrelated
 const coursework_prompt = ["material", "coursework", "learn", "teach", "taught", "curriculum"]
 const coursework_answer = "Students will be taught the fundamentals in programming logic, and will be exposed to front-end and back-end work, as well as being trained in workplace professionalism."
 
-const benefits_prompt = ["benefit", "perk",]
+const benefits_prompt = ["benefit", "perk"]
 const benefits_answer = "Base Camp students will be given gas cards to pay for their travels, and will gain accredited college hours at the end of the program."
 
-const schedule_prompt = ["day", "schedule", "daily", "routine"]
+const schedule_prompt = ["normal day", "schedule", "daily", "routine", "day at base camp"]
 const schedule_answer = "All students are required to sign in by 8:15. Throughout the day, the students are allowed to take breaks as needed. Along with this, students are given an hour every day for lunch. Class ends at 4:30."
 
 const where_prompt = ["where", "located", "far", "location"]
@@ -31,10 +31,8 @@ const director_answer = "The Director of Base Camp is Sean Ennis."
 const trustees_prompt = ["board of", "trustees", "board"]
 const trustees_answer = "The board of trustees is made up of Kagan Coughlin, Glen Evans, John Marsalis, Sage Nichols, Bethany Cooper, Carla Lewis, and Brad Carpenter."
 
-const founded_prompt = ["found", "made", ]
+const founded_prompt = ["founded", "made", "founder"]
 const founded_answer = "Base Camp was founded in 2015 by Kagan Coughlin and Glen Evans."
-
-//  how long is Base Camp
 
 const substitute = "I'm sorry, I didn't catch that! Please rephrase the question. You can also email the director at seanennis@basecampcodingacademy.org"
 

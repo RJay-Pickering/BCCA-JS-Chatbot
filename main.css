@@ -41,6 +41,7 @@
     min-width: 100px; 
     margin-right: -30%;
     margin-left: 60%;
+    background-color: #C4A484;
 }
 
 .bot_message {
@@ -60,12 +61,17 @@
     margin-left: -30%;
     margin-right: 60%;
     scroll-snap-stop: always;
+    background-color: cyan;
     display: inline-block"
 }
 
 .character_length {
     margin-left: 77%;
     margin-bottom: .25%;
+}
+
+body {
+    background-color: #ff8635;
 }
 
 /* later for chat pictures */
