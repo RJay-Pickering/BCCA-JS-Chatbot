@@ -1,4 +1,4 @@
-1. beforeunload eventListener (are you sure you want to submit form again)
+1. beforeUnload eventListener (are you sure you want to submit form again)
 2. Message box sizes change dynamically with the message length
 3. setTimeout for bot Typing so as to appear more lifelike
 4. email will directly link to send an email

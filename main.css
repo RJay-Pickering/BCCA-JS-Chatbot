@@ -16,7 +16,14 @@
 }
 
 .user_input {
-    margin-left: 80%;
+    margin-left: 76%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 2vw;
+    padding-left: .5%;
+    padding-right: .5%;
+    width: 20vw;
+    height: 3vw;
 }
 
 .user_message {
@@ -57,5 +64,17 @@
 }
 
 .character_length {
-    margin-left: 80%;
+    margin-left: 77%;
+    margin-bottom: .25%;
 }
+
+/* later for chat pictures */
+
+/* .bot_image {
+    width: 12%;
+    height: 12%;
+}
+
+.image_border {
+    margin-right: -50%;
+} */
