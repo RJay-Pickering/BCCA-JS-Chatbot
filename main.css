@@ -4,12 +4,17 @@
 }
 
 .message_history {
-  padding: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
   border-style: solid;
   border-color: grey;
-  border-radius: 3.5vw;
+  border-top-left-radius: 3.5vw;
+  border-top-right-radius: 3.5vw;
+  border-bottom-left-radius: 3.5vw;
+  margin-left: 0.8%;
   margin-bottom: 1.5%;
-  height: 4vw;
+  height: 45vw;
+  width: 57.5vw;
   background: ghostwhite;
   overflow: scroll;
   overflow-x: hidden;
@@ -17,14 +22,18 @@
 }
 
 .user_input {
-  margin-left: 76%;
+  margin-left: 55.43%;
+  margin-top: -1.5%;
+  font-size: 1.25vw;
   border-style: solid;
-  border-color: black;
-  border-radius: 2vw;
-  padding-left: 0.5%;
-  padding-right: 0.5%;
-  width: 20vw;
-  height: 2vw;
+  border-color: grey;
+  border-bottom-left-radius: 3.5vw;
+  border-bottom-right-radius: 3.5vw;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  width: 40vw;
+  height: 4vw;
+  outline: none;
 }
 
 .user_message {
@@ -34,8 +43,8 @@
 }
 
 .user_box {
-  margin-top: -30%;
-  margin-bottom: 30%;
+  margin-top: -2%;
+  margin-bottom: -2%;
   border-style: solid;
   border-color: #6e5c4a;
   border-radius: 3.5vw;
@@ -53,8 +62,8 @@
 }
 
 .bot_box {
-  margin-top: -30%;
-  margin-bottom: 30%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   border-style: solid;
   border-color: rgb(169, 169, 182);
   border-radius: 3.5vw;
