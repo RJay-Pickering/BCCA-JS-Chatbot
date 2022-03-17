@@ -8,6 +8,7 @@ const hello_prompt = [
   "greetings",
   "what's up",
   "what up",
+  "wassup",
   "hey",
   "hoi",
   "good day",
@@ -20,13 +21,20 @@ const hello_response = [
   "Hello!",
   "Heya!",
   "Hello, please feel free to ask me any questions!",
+  "Howdy!",
+  "Greetings, human... I've been expecting you...",
+  "Hey there!",
 ];
 
-const i_have_a_question_prompt = ["i have a question"];
-const i_have_a_question_response = "And, I have a answer!";
+const i_have_a_question_prompt = ["i have a question", "question"];
+const i_have_a_question_response = [
+  "I have an answer!",
+  "What's your question?",
+  "I'm Listening...",
+];
 
 const tuition_prompt = [
-  "how much does base camp cost?",
+  "how much does base camp cost",
   "cost",
   "tuition",
   "price",
@@ -95,6 +103,8 @@ const founded_response =
 const substitute =
   "I'm sorry, I didn't catch that! Please rephrase the question. You can also email the director at seanennis@basecampcodingacademy.org";
 
+// const substituteTwo = "seanennis@basecampcodingacademy.org";
+
 //--------------------------------------------------------------------------------
 
 const messages = document.querySelector(".message_history");
@@ -112,6 +122,11 @@ function containsSubstring(str, substrings) {
   return null;
 }
 
+function randomResponse(responses) {
+  let response = responses[Math.floor(Math.random() * responses.length)];
+  return response;
+}
+
 // Creates the bot's first message upon the window loading
 window.addEventListener("load", () => {
   var bot_message = document.createElement("P");
@@ -125,32 +140,16 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     bot_message.innerHTML =
       "Welcome! I'm Everest, the prototype Base Camp Coding Academy chatbot created by RJay Pickering and Randy Trullet!";
-  }, 3500);
+  }, 3000);
 });
-
-// // A viewable counter that allows users to check the character limit
-// input.addEventListener("input", () => {
-//   characters = input.value.length;
-//   c_length.innerHTML = `${characters}/90`;
-//   if (characters > 90) {
-//     c_length.style.color = "red";
-//   } else {
-//     c_length.style.color = "black";
-//   }
-// });
 
 // Creates a text bubble for user's messages
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    // c_length.innerText = "0/90";
     if (input.value != "") {
       if (/^\s*$/.test(input)) {
         input.value = "";
       }
-      // Due to the size of a bubble, the user's message must be checked for length before submitted, an alert will trigger if users attempt to exceed the character limit
-      // if (input.value.length > 90) {
-      //   alert("Message input must be 90 characters or less.");
-      // } else {
       // User Messages
       var user_message = document.createElement("P");
       user_message.classList.add("user_message");
@@ -163,8 +162,15 @@ input.addEventListener("keydown", (e) => {
       var bot_message = document.createElement("P");
       bot_message.classList.add("bot_message");
       var bot_box = document.createElement("div");
+      // var botImageBox = document.createElement("div");
+      // botImageBox.classList.add("botImageBox");
+      // var botImage = document.createElement("IMG");
+      // botImage.classList.add("botImage");
+      // botImage.src = "images/Everest.png";
       bot_box.classList.add("bot_box");
       bot_message.innerHTML = "Typing...";
+      // botImageBox.append(botImage);
+      // bot_box.append(botImageBox);
       bot_box.append(bot_message);
       messages.append(bot_box);
       // Searches for keywords within the prompt variables
@@ -172,78 +178,89 @@ input.addEventListener("keydown", (e) => {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = tuition_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), when_apply_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = when_apply_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), how_apply_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = how_apply_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), coursework_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = coursework_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), benefits_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = benefits_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), schedule_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = schedule_response;
-        }, 3500);
+        }, 3000);
       } else if (containsSubstring(input.value.toLowerCase(), where_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = where_response;
-        }, 3500);
+        }, 3000);
       } else if (containsSubstring(input.value.toLowerCase(), what_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = what_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), director_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = director_response;
-        }, 3500);
+        }, 3000);
       } else if (
         containsSubstring(input.value.toLowerCase(), trustees_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = trustees_response;
-        }, 3500);
+        }, 3000);
       } else if (containsSubstring(input.value.toLowerCase(), founded_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = founded_response;
-        }, 3500);
+        }, 3000);
+      } else if (containsSubstring(input.value.toLowerCase(), hello_prompt)) {
+        console.log("Match found!");
+        setTimeout(() => {
+          bot_message.innerHTML = randomResponse(hello_response);
+        }, 3000);
+      } else if (
+        containsSubstring(input.value.toLowerCase(), i_have_a_question_prompt)
+      ) {
+        console.log("Match found!");
+        setTimeout(() => {
+          bot_message.innerHTML = randomResponse(i_have_a_question_response);
+        }, 3000);
       } else {
         setTimeout(() => {
           bot_message.innerHTML = substitute;
-        }, 3500);
+        }, 3000);
       }
       input.value = "";
     }
   }
 });
-// });
