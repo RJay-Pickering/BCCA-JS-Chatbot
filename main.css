@@ -24,6 +24,7 @@
 
 .user_input {
   margin-left: 55.43%;
+  margin-right: 0%;
   margin-top: -1.5%;
   font-size: 1.25vw;
   border-style: solid;
@@ -35,6 +36,7 @@
   width: 40vw;
   height: 4vw;
   outline: none;
+  -webkit-safari-margin-left: 100vw;
 }
 
 .user_message {
@@ -45,7 +47,7 @@
 
 .user_box {
   margin-top: -2%;
-  margin-bottom: -2%;
+  margin-bottom: 1%;
   border-style: solid;
   border-color: #6e5c4a;
   border-radius: 3.5vw;
@@ -95,3 +97,37 @@ body {
 .image_border {
     margin-right: -50%;
 } */
+
+@media screen and (max-width: 800px) {
+  .message_history {
+    margin-top: -2%;
+    height: 120vw;
+    width: 55vw;
+    margin-left: 1.5%;
+    margin-bottom: 1.5%;
+  }
+
+  .title {
+    margin-top: -0.5%;
+  }
+
+  .user_input {
+    margin-left: 53.8%;
+    height: 6vw;
+    font-size: 3vw;
+  }
+
+  .bot_box {
+    margin-top: 6%;
+    min-width: 20vw;
+    margin-right: 0%;
+    border-radius: 8vw;
+  }
+
+  .user_box {
+    margin-top: 6%;
+    min-width: 20vw;
+    margin-left: 0%;
+    border-radius: 8vw;
+  }
+}

@@ -22,7 +22,6 @@ const hello_response = [
   "Heya!",
   "Hello, please feel free to ask me any questions!",
   "Howdy!",
-  "Greetings, human... I've been expecting you...",
   "Hey there!",
 ];
 
@@ -171,94 +170,96 @@ input.addEventListener("keydown", (e) => {
       bot_message.innerHTML = "Typing...";
       // botImageBox.append(botImage);
       // bot_box.append(botImageBox);
+      setTimeout(() => {
+        messages.append(bot_box);
+      }, 2000);
       bot_box.append(bot_message);
-      messages.append(bot_box);
       // Searches for keywords within the prompt variables
       if (containsSubstring(input.value.toLowerCase(), tuition_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = tuition_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), when_apply_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = when_apply_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), how_apply_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = how_apply_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), coursework_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = coursework_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), benefits_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = benefits_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), schedule_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = schedule_response;
-        }, 3000);
+        }, 4000);
       } else if (containsSubstring(input.value.toLowerCase(), where_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = where_response;
-        }, 3000);
+        }, 4000);
       } else if (containsSubstring(input.value.toLowerCase(), what_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = what_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), director_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = director_response;
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), trustees_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = trustees_response;
-        }, 3000);
+        }, 4000);
       } else if (containsSubstring(input.value.toLowerCase(), founded_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = founded_response;
-        }, 3000);
+        }, 4000);
       } else if (containsSubstring(input.value.toLowerCase(), hello_prompt)) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = randomResponse(hello_response);
-        }, 3000);
+        }, 4000);
       } else if (
         containsSubstring(input.value.toLowerCase(), i_have_a_question_prompt)
       ) {
         console.log("Match found!");
         setTimeout(() => {
           bot_message.innerHTML = randomResponse(i_have_a_question_response);
-        }, 3000);
+        }, 4000);
       } else {
         setTimeout(() => {
           bot_message.innerHTML = substitute;
-        }, 3000);
+        }, 4000);
       }
       input.value = "";
     }

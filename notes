@@ -1,4 +1,9 @@
-1. beforeUnload eventListener (are you sure you want to submit form again)
-2. setTimeout for bot Typing so as to appear more lifelike
-3. email will directly link to send an email
-4. images for messages
+Need to have
+1. Resizing for other browsers and mobile
+2. beforeUnload eventListener (are you sure you want to submit form again)
+3. setTimeout for bot Typing so as to appear more lifelike
+4. email will directly link to send an email
+
+
+EXTRAS
+1. images for messages
